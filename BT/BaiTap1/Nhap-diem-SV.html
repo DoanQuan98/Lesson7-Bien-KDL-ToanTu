@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập điểm</title>
+</head>
+<body>
+<script>
+    let physical;
+    let chemistry;
+    let biological;
+    physical = prompt('Enter physical score:');
+    chemistry = prompt('Enter chemistry score:');
+    biological = prompt('Enter biological score:');
+    let a = parseInt(physical);
+    let b = parseInt(chemistry);
+    let c = parseInt(biological);
+    let average = (a + b + c) / 3;
+    document.write('Your GPA is: ' + average);
+    // Kết quả hiển thị lên màn hình giao diện
+    alert('Your GPA is: ' + average);
+    // Kết quả hiển thị lên thanh prompt
+</script>
+</body>
+</html>

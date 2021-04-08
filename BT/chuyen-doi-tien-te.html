@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Curency conversion</title>
+</head>
+<style>
+    fieldset {
+        width: 800px;
+        height: 100px;
+    }
+    table {
+        text-align: center;
+    }
+    legend {
+        background-color: gray;
+        color: white;
+    }
+</style>
+<body>
+
+<fieldset>
+    <legend>Currency conversion:</legend>
+<table>
+    <tr>
+        <td>Amount</td>
+        <td>From Currency</td>
+        <td>To Currency</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="money">
+        </td>
+        <td>
+            <select id="form">
+                <option value="23000">VNĐ</option>
+                <option value="1">USD</option>
+                <option value="0.85">EURO</option>
+            </select>
+        </td>
+        <td>
+            <select id="to">
+                <option value="23000">VNĐ</option>
+                <option value="1">USD</option>
+                <option value="0.85">EURO</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="convert()">Convert</button>
+        </td>
+        <td>
+            <p id="result"></p>
+        </td>
+    </tr>
+</table>
+</fieldset>
+<script>
+    function convert() {
+        let money = document.getElementById('money').value;
+        let form = document.getElementById('form').value;
+        let to = document.getElementById('to').value;
+        if (isNaN(money) || money < 0) {
+            alert('money you entered is wrong');
+        } else {
+            let result = money * (to / form);
+            document.getElementById('result').innerText = "Money you change: " + result + "";
+        }
+    }
+</script>
+</body>
+</html>

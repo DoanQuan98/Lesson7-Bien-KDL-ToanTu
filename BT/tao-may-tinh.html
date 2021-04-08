@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    fieldset {
+        width: 500px;
+        height: 100px;
+    }
+    input {
+        width: 100px;
+    }
+</style>
+<body>
+<fieldset>
+    <legend>Caculator</legend>
+    <input type="number" id="number1">
+    <input type="number" id="number2">
+    <a id="result"></a>
+    <hr>
+    <button onclick="plus()">Addition(+)</button>
+    <button onclick="minus()">Subtraction(-)</button>
+    <button onclick="multiply()">Multiplication(x)</button>
+    <button onclick="division()">Division(/)</button>
+</fieldset>
+<script>
+    function plus() {
+        let a = +document.getElementById('number1').value;
+        let b = +document.getElementById('number2').value;
+        let total = a + b;
+        document.getElementById('result').innerText = "= " + total + "";
+    }
+    function minus() {
+        let a = +document.getElementById('number1').value;
+        let b = +document.getElementById('number2').value;
+        let difference = a - b;
+        document.getElementById('result').innerText = "= " + difference + "";
+    }
+    function multiply() {
+        let a = +document.getElementById('number1').value;
+        let b = +document.getElementById('number2').value;
+        let integral = a * b;
+        document.getElementById('result').innerText = "= " + integral + "";
+    }
+    function division() {
+        let a = +document.getElementById('number1').value;
+        let b = +document.getElementById('number2').value;
+        let quotient = a / b;
+        document.getElementById('result').innerText = "= " + quotient + "";
+    }
+</script>
+</body>
+</html>
